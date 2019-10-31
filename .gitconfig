@@ -1,0 +1,16 @@
+[user]
+	email = annarailton@github.com
+	name = annarailton
+[core]
+	editor = nano
+[push]
+	default = simple
+[alias]
+    a = add
+    st = status -s
+    cm = commit -m
+    cn = commit -n -m
+    c = commit
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    up = !git fetch origin && git rebase origin/master --autostash
+    logn = log --name-only

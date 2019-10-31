@@ -1,0 +1,77 @@
+#######################################
+# Normalizes date arguments
+# Arguments:
+#   date (defaults to today)
+# Returns:
+#   string of format 'YYYY-MM-DD'
+#######################################
+function getDate {
+  local DATE=${1:-$(date -I)};
+  if [[ "${DATE}" =~ [+]+ ]]; then
+      DATE=$(date -I -d" ${DATE} days");
+  elif [[ "${DATE}" =~ ^- ]]; then
+      DATE=$(date -I -d" ${DATE} days");
+  elif [[ "${DATE}" == "tomorrow" ]]; then
+      DATE=$(date -I -d" +1 days");
+  elif [[ "${DATE}" == "yesterday" ]]; then
+      DATE=$(date -I -d" -1 days");
+  fi
+  echo "${DATE}";
+}
+
+#######################################
+# Load a journal file
+# Arguments:
+#   date (defaults to today)
+#######################################
+function journal {
+  local DATE=$(getDate "$1");
+  JOURNAL_FILE=~/projects/journal/notes/${DATE}.md
+  if [ ! -f ${JOURNAL_FILE} ]; then
+    echo -e "# ${DATE}\n\n" >> ${JOURNAL_FILE}
+  fi
+  subl ${JOURNAL_FILE}
+}
+
+function didcm {
+  local DATE=$(getDate "$1");
+  JOURNAL_FILE=~/projects/journal/notes/${DATE}.md
+  cd ~/projects/journal
+  git add ${JOURNAL_FILE}
+  git cm "Add journal entry for ${DATE}"
+  git push origin master
+  cd ~-
+}
+
+# More journal file options
+alias did='journal'
+
+# Get latest version of sublime-text
+alias update-sublime-dev='echo "deb https://download.sublimetext.com/ apt/dev/" | sudo tee /etc/apt/sources.list.d/sublime-text.list && sudo apt-get update && sudo apt-get install sublime-text'
+alias update-sublime-stable=' echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list && sudo apt-get update && sudo apt-get install sublime-text'
+alias update-sublime='update-sublime-dev'
+
+# Command for getting newest file in current directory
+alias newest='ls -Art | tail -n 1'
+
+# I use readlink a lot apparently
+alias where='readlink -f .'
+
+# Other
+alias o=xdg-open
+alias dus='du -sh * | sort -h'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias most_recent="find . -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -f2- -d' '"
+
+# Be polite
+alias please='sudo $(history -p !!)'
+
+# odasa setup
+alias setup_odasa='source /home/railton/ext_projects/odasa/setup.sh'
+
+# systemctl commands are long
+alias sys-restart='systemctl restart'
+alias sys-stop='systemctl stop'
+alias sys-start='systemctl start'
+alias sys-st='systemctl status'

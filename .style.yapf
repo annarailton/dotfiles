@@ -1,0 +1,7 @@
+# In yapf >0.27.0, behaviour of default behaviour around SPLIT_BEFORE_FIRST_ARGUMENT 
+# changed. This overrides this. Put in top level of your directory with 
+# .pre-commit-config.yml file.
+
+[style]
+based_on_style = pep8
+split_before_first_argument = True
