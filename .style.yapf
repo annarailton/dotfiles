@@ -1,7 +1,10 @@
-# In yapf >0.27.0, behaviour of default behaviour around SPLIT_BEFORE_FIRST_ARGUMENT 
-# changed. This overrides this. Put in top level of your directory with 
+# In yapf >0.27.0, behaviour of default behaviour around SPLIT_BEFORE_FIRST_ARGUMENT
+# changed. This overrides this. Put in top level of your directory with
 # .pre-commit-config.yml file.
 
 [style]
 based_on_style = pep8
-split_before_first_argument = True
+SPLIT_BEFORE_FIRST_ARGUMENT = True
+SPLIT_BEFORE_BITWISE_OPERATOR = False
+COLUMN_LIMIT: 99
+INDENT_WIDTH=4  # The number of columns to use for indentation
