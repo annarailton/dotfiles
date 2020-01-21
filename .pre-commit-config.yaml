@@ -9,16 +9,17 @@ repos:
   rev: v2.2.3
   hooks:
   - id: check-added-large-files
+  - id: check-ast
+  - id: check-docstring-first
   - id: check-executables-have-shebangs
   - id: check-json
   - id: check-yaml
+  - id: detect-private-key
+  - id: double-quote-string-fixer
+  - id: end-of-file-fixer
   - id: pretty-format-json
     args: ['--autofix']
-  - id: detect-private-key
-  - id: check-ast
-  - id: check-docstring-first
   - id: trailing-whitespace
-  - id: double-quote-string-fixer
 
 - repo: https://github.com/annarailton/mirrors-autoflake.git
   rev: v1.1
