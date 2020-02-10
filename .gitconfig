@@ -3,7 +3,7 @@
 	name = annarailton
 	signingkey = 6559695657CC220B
 [core]
-	editor = nano
+	editor = nano -r 72
 [push]
 	default = simple
 [alias]
