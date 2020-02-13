@@ -125,11 +125,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Setup default editor
+# Setup default editors
 export EDITOR=subl
-
-# Start ssh agent so can ssh to Git
-eval "$(ssh-agent -s)"
+export GIT_EDITOR=nano
 
 # Required for The Fuck to work https://github.com/nvbn/thefuck
 eval $(thefuck --alias)
