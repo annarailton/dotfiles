@@ -17,15 +17,10 @@
     up = !git fetch origin && git rebase origin/master --autostash
     logn = log --name-only
     b = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+    pushf = push --force-with-lease
 
-[filesystem "Private Build|1.8.0_222|/dev/mapper/ubuntu--vg-root"]
-	timestampResolution = 1001 microseconds
-	minRacyThreshold = 4577 microseconds
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[filesystem "Private Build|1.8.0_232|/dev/mapper/ubuntu--vg-root"]
-	timestampResolution = 1001 microseconds
-	minRacyThreshold = 7294 microseconds
