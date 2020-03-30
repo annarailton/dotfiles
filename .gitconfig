@@ -1,11 +1,11 @@
 [user]
-	email = annarailton@github.com
-	name = annarailton
-	signingkey = 6559695657CC220B
+    email = annarailton@github.com
+    name = annarailton
+    signingkey = 6559695657CC220B
 [core]
-	editor = nano -r 72
+    editor = nano -r 72
 [push]
-	default = simple
+    default = simple
 [alias]
     a = add
     st = status -s
@@ -18,9 +18,13 @@
     logn = log --name-only
     b = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
     pushf = push --force-with-lease
-
+    bm = "!f() { git b --merged; }; f"
+    bn = "!f() { git b --no-merged; }; f"
+    bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
+    cob = checkout -b
+    wip = commit -am "WIP"
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
