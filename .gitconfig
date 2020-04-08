@@ -13,6 +13,7 @@
     cm = commit -m
     cn = commit -n -m
     c = commit
+    cf = commit --fixup
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     up = !git fetch origin && git rebase origin/master --autostash
     logn = log --name-only
@@ -21,7 +22,9 @@
     bm = "!f() { git b --merged; }; f"
     bn = "!f() { git b --no-merged; }; f"
     bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
+    co = checkout
     cob = checkout -b
+    com = checkout master
     wip = commit -am "WIP"
 [filter "lfs"]
     clean = git-lfs clean -- %f
