@@ -12,3 +12,9 @@ color brightmagenta "@@.*@@"
 color white "# (Change[ds]|Untracked) .*"
 color white "#.*\(use .*"
 color white "^#"
+
+# overlong lines which are not comments
+color brightred "^[^#].{80,}.+$"
+
+# issue number with optional closing keyword
+icolor yellow "((close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved) )?#[1234567890]+"
