@@ -56,14 +56,3 @@ repos:
           'flake8-todo',
           ]
     args: ['--ignore=P1,P2,E251,W504,E50,E111,E114,E121,E131']  # valid E251 caught by yapf
-
-# Lint any markdown (requires Ruby >=2.4)
-- repo: https://github.com/markdownlint/markdownlint
-  rev: v0.8.0
-  hooks:
-  - id: markdownlint
-    name: Markdownlint
-    description: Run markdownlint on your Markdown files
-    entry: mdl
-    language: ruby
-    files: \.(md|mdown|markdown)$
