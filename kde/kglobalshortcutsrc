@@ -1,6 +1,8 @@
 [ActivityManager]
 _k_friendly_name=Activity Manager
+switch-to-activity-299e8182-91ed-4c05-83f8-ce06e4208979=none,none,Switch to activity "Default"
 switch-to-activity-daa8ed9c-ae22-4414-850c-1f524d49502b=none,none,Switch to activity "Default"
+switch-to-activity-e7e7c8a2-91cc-4dbf-998a-520736570df3=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
 Switch keyboard layout to English (UK)=none,none,Switch keyboard layout to English (UK)
@@ -25,11 +27,12 @@ display=Display\tMeta+P,Display\tMeta+P,Switch Display
 [khotkeys]
 _k_friendly_name=KDE Daemon
 {2482ecae-4c5d-4204-ac5e-08936ff58f7b}=Meta+I,none,Chrome
+{24dcab47-2e10-47ac-a485-d3ca85698305}=Ctrl+Alt+T,none,Run Konsole
 {b0974481-c275-4b20-a41e-91cf5ae029ea}=Meta+S,none,Sublime
 {c015bc36-d7e7-4233-a1dd-c23deb3a1750}=Meta+C,none,Calculator
 {c48887c9-6344-429d-bcbb-7fe89ce046de}=Meta+K,none,KeepassXC
 {d03619b6-9b3c-48cc-9d9c-a2aadb485550}=,none,Search
-{e5444c57-ed10-4b14-8140-4542aa4f2326}=Ctrl+Alt+T,none,Launch Konsole
+{e5444c57-ed10-4b14-8140-4542aa4f2326}=,none,Launch Konsole
 
 [kmix]
 _k_friendly_name=Audio Volume
@@ -43,7 +46,7 @@ mute=Volume Mute,Volume Mute,Mute
 [krunner.desktop]
 RunClipboard=Alt+Shift+F2,Alt+Shift+F2,Run command on clipboard contents
 _k_friendly_name=KRunner
-_launch=Alt+Space\tAlt+F2\tSearch,Alt+Space\tAlt+F2\tSearch,KRunner
+_launch=Alt+Space\tAlt+F2\tSearch,none,KRunner
 
 [ksmserver]
 Halt Without Confirmation=Ctrl+Alt+Shift+PgDown,none,Halt Without Confirmation
@@ -68,6 +71,7 @@ MoveZoomDown=none,none,Move Zoomed Area Downwards
 MoveZoomLeft=none,none,Move Zoomed Area to Left
 MoveZoomRight=none,none,Move Zoomed Area to Right
 MoveZoomUp=none,none,Move Zoomed Area Upwards
+Remove Window From Group=none,none,Remove Window From Group
 Setup Window Shortcut=none,none,Setup Window Shortcut
 Show Desktop=Meta+D,Meta+D,Show Desktop
 ShowDesktopGrid=Ctrl+F8,Ctrl+F8,Show Desktop Grid
@@ -112,12 +116,15 @@ Switch to Screen 4=none,none,Switch to Screen 4
 Switch to Screen 5=none,none,Switch to Screen 5
 Switch to Screen 6=none,none,Switch to Screen 6
 Switch to Screen 7=none,none,Switch to Screen 7
+Toggle Night Color=none,none,Toggle Night Color
 Toggle Night Colour=none,none,Toggle Night Colour
 Toggle Window Raise/Lower=none,none,Toggle Window Raise/Lower
 Walk Through Desktop List=none,none,Walk Through Desktop List
 Walk Through Desktop List (Reverse)=none,none,Walk Through Desktop List (Reverse)
 Walk Through Desktops=none,none,Walk Through Desktops
 Walk Through Desktops (Reverse)=none,none,Walk Through Desktops (Reverse)
+Walk Through Window Tabs=none,none,Walk Through Window Tabs
+Walk Through Window Tabs (Reverse)=none,none,Walk Through Window Tabs (Reverse)
 Walk Through Windows=Alt+Tab,Alt+Tab,Walk Through Windows
 Walk Through Windows (Reverse)=Alt+Shift+Backtab,Alt+Shift+Backtab,Walk Through Windows (Reverse)
 Walk Through Windows Alternative=none,none,Walk Through Windows Alternative
@@ -133,10 +140,10 @@ Window Fullscreen=none,none,Make Window Fullscreen
 Window Grow Horizontal=none,none,Pack Grow Window Horizontally
 Window Grow Vertical=none,none,Pack Grow Window Vertically
 Window Lower=none,none,Lower Window
-Window Maximize=Ctrl+Alt+Num+5,Meta+PgUp,Maximise Window
+Window Maximize=Meta+PgUp\tCtrl+Alt+Num+5,Meta+PgUp,Maximise Window
 Window Maximize Horizontal=none,none,Maximise Window Horizontally
 Window Maximize Vertical=none,none,Maximise Window Vertically
-Window Minimize=Ctrl+Alt+Num+0,Meta+PgDown,Minimise Window
+Window Minimize=Meta+PgDown,Meta+PgDown,Minimise Window
 Window Move=none,none,Move Window
 Window No Border=none,none,Hide Window Border
 Window On All Desktops=none,none,Keep Window on All Desktops
@@ -149,14 +156,14 @@ Window Pack Down=none,none,Pack Window Down
 Window Pack Left=none,none,Pack Window to the Left
 Window Pack Right=none,none,Pack Window to the Right
 Window Pack Up=none,none,Pack Window Up
-Window Quick Tile Bottom=Ctrl+Alt+Num+2,Meta+Down,Quick Tile Window to the Bottom
-Window Quick Tile Bottom Left=Ctrl+Alt+Num+1,none,Quick Tile Window to the Bottom Left
-Window Quick Tile Bottom Right=Ctrl+Alt+Num+3,none,Quick Tile Window to the Bottom Right
-Window Quick Tile Left=Ctrl+Alt+Num+4,Meta+Left,Quick Tile Window to the Left
-Window Quick Tile Right=Ctrl+Alt+Num+6,Meta+Right,Quick Tile Window to the Right
-Window Quick Tile Top=Ctrl+Alt+Num+8,Meta+Up,Quick Tile Window to the Top
-Window Quick Tile Top Left=Ctrl+Alt+Num+7,none,Quick Tile Window to the Top Left
-Window Quick Tile Top Right=Ctrl+Alt+Num+9,none,Quick Tile Window to the Top Right
+Window Quick Tile Bottom=Meta+Down\tCtrl+Alt+Num+2,Meta+Down,Quick Tile Window to the Bottom
+Window Quick Tile Bottom Left=\tCtrl+Alt+Num+1,none,Quick Tile Window to the Bottom Left
+Window Quick Tile Bottom Right=\tCtrl+Alt+Num+3,none,Quick Tile Window to the Bottom Right
+Window Quick Tile Left=Meta+Left\tCtrl+Alt+Num+4,Meta+Left,Quick Tile Window to the Left
+Window Quick Tile Right=Meta+Right\tCtrl+Alt+Num+6,Meta+Right,Quick Tile Window to the Right
+Window Quick Tile Top=Meta+Up\tCtrl+Alt+Num+8,Meta+Up,Quick Tile Window to the Top
+Window Quick Tile Top Left=\tCtrl+Alt+Num+7,none,Quick Tile Window to the Top Left
+Window Quick Tile Top Right=\tCtrl+Alt+Num+9,none,Quick Tile Window to the Top Right
 Window Raise=none,none,Raise Window
 Window Resize=none,none,Resize Window
 Window Shade=none,none,Shade Window
@@ -212,6 +219,10 @@ stopmedia=Media Stop,Media Stop,Stop media playback
 _k_friendly_name=Dolphin
 _launch=Meta+E,Meta+E,Dolphin
 
+[org.kde.konsole.desktop]
+_k_friendly_name=Konsole
+_launch=,none,Launch Konsole
+
 [org.kde.plasma.emojier.desktop]
 _k_friendly_name=Emoji Selector
 _launch=Meta+.,Meta+.,Emoji Selector
@@ -222,7 +233,7 @@ CurrentMonitorScreenShot=,none,Capture Current Monitor
 FullScreenScreenShot=Shift+Print,Shift+Print,Capture Entire Desktop
 RectangularRegionScreenShot=Meta+Shift+Print,Meta+Shift+Print,Capture Rectangular Region
 _k_friendly_name=Spectacle
-_launch=Print,Print,Spectacle
+_launch=Print,Print,Launch Spectacle
 
 [org_kde_powerdevil]
 Decrease Keyboard Brightness=Keyboard Brightness Down,Keyboard Brightness Down,Decrease Keyboard Brightness
@@ -250,6 +261,7 @@ activate task manager entry 8=Meta+8,Meta+8,Activate Task Manager Entry 8
 activate task manager entry 9=Meta+9,Meta+9,Activate Task Manager Entry 9
 activate widget 24=none,none,Activate Icons-only Task Manager Widget
 activate widget 3=Alt+F1,none,Activate Application Launcher Widget
+activate widget 5=,none,Activate Task Manager Widget
 clear-history=none,none,Clear Clipboard History
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Enable Clipboard Actions
 cycleNextAction=none,none,Next History Item

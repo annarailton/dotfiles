@@ -105,6 +105,10 @@ ForegroundNormal=239,240,241
 ForegroundPositive=39,174,96
 ForegroundVisited=127,140,141
 
+[DirSelect Dialog]
+DirSelectDialog Size=903,618
+History Items[$e]=file:$HOME/Pictures/wallpapers/vaporwave,file:$HOME/Pictures/wallpapers/vaporwave
+
 [Emoticons]
 emoticonsTheme=EmojiOne
 parseMode=2
@@ -126,9 +130,31 @@ LookAndFeelPackage=org.kde.breezedark.desktop
 contrast=4
 widgetStyle=Breeze
 
+[KFileDialog Settings]
+Allow Expansion=false
+Automatically select filename extension=true
+Breadcrumb Navigation=true
+Decoration position=2
+LocationCombo Completionmode=5
+PathCombo Completionmode=5
+Show Bookmarks=false
+Show Full Path=false
+Show Inline Previews=true
+Show Preview=false
+Show Speedbar=true
+Show hidden files=false
+Sort by=Date
+Sort directories first=true
+Sort reversed=true
+Speedbar Width=138
+View Style=DetailTree
+
 [KScreen]
-ScaleFactor=1.3125
-ScreenScaleFactors=eDP-1=1.3125;DP-1=1.3125;HDMI-1=1.3125;DP-2=1.3125;HDMI-2=1.3125;
+ScaleFactor=1.5
+ScreenScaleFactors=eDP-1=1.5;DP-1=1.5;HDMI-1=1.5;DP-2=1.5;HDMI-2=1.5;
+
+[KShortcutsDialog Settings]
+Dialog Size=630,480
 
 [WM]
 activeBackground=49,54,59

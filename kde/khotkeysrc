@@ -2,7 +2,7 @@
 update_info=spectacle_shortcuts.upd:spectacle-migrate-shortcuts
 
 [Data]
-DataCount=7
+DataCount=8
 
 [Data_1]
 Comment=KMenuEdit Global Shortcuts
@@ -64,7 +64,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_2Triggers0]
-Key=Ctrl+Alt+T
+Key=
 Type=SHORTCUT
 Uuid={e5444c57-ed10-4b14-8140-4542aa4f2326}
 
@@ -552,57 +552,31 @@ Type=SHORTCUT
 Uuid={14b0fc62-67e9-4691-865e-372c1aa731ff}
 
 [Data_3_3]
-Comment=This action runs Konsole, after pressing Ctrl+Alt+T.
-Enabled=false
-Name=Run Konsole
-Type=SIMPLE_ACTION_DATA
-
-[Data_3_3Actions]
-ActionsCount=1
-
-[Data_3_3Actions0]
-CommandURL=konsole
-Type=COMMAND_URL
-
-[Data_3_3Conditions]
-Comment=
-ConditionsCount=0
-
-[Data_3_3Triggers]
-Comment=Simple_action
-TriggersCount=1
-
-[Data_3_3Triggers0]
-Key=Ctrl+Alt+T
-Type=SHORTCUT
-Uuid={24dcab47-2e10-47ac-a485-d3ca85698305}
-
-[Data_3_4]
 Comment=Read the comment on the "Type 'Hello'" action first.\n\nQt Designer uses Ctrl+F4 for closing windows.  In KDE, however, Ctrl+F4 is the shortcut for going to virtual desktop 4, so this shortcut does not work in Qt Designer.  Further, Qt Designer does not use KDE's standard Ctrl+W for closing the window.\n\nThis problem can be solved by remapping Ctrl+W to Ctrl+F4 when the active window is Qt Designer. When Qt Designer is active, every time Ctrl+W is pressed, Ctrl+F4 will be sent to Qt Designer instead. In other applications, the effect of Ctrl+W is unchanged.\n\nWe now need to specify three things: A new shortcut trigger on 'Ctrl+W', a new keyboard input action sending Ctrl+F4, and a new condition that the active window is Qt Designer.\nQt Designer seems to always have title 'Qt Designer by Trolltech', so the condition will check for the active window having that title.
 Enabled=false
 Name=Remap Ctrl+W to Ctrl+F4 in Qt Designer
 Type=GENERIC_ACTION_DATA
 
-[Data_3_4Actions]
+[Data_3_3Actions]
 ActionsCount=1
 
-[Data_3_4Actions0]
+[Data_3_3Actions0]
 DestinationWindow=2
 Input=Ctrl+F4
 Type=KEYBOARD_INPUT
 
-[Data_3_4Conditions]
+[Data_3_3Conditions]
 Comment=
 ConditionsCount=1
 
-[Data_3_4Conditions0]
+[Data_3_3Conditions0]
 Type=ACTIVE_WINDOW
 
-[Data_3_4Conditions0Window]
+[Data_3_3Conditions0Window]
 Comment=Qt Designer
 WindowsCount=1
 
-[Data_3_4Conditions0Window0]
+[Data_3_3Conditions0Window0]
 Class=
 ClassType=0
 Comment=
@@ -613,63 +587,63 @@ TitleType=2
 Type=SIMPLE
 WindowTypes=33
 
-[Data_3_4Triggers]
+[Data_3_3Triggers]
 Comment=
 TriggersCount=1
 
-[Data_3_4Triggers0]
+[Data_3_3Triggers0]
 Key=Ctrl+W
 Type=SHORTCUT
 Uuid={b0bb82ca-2a87-4554-a32b-21fddd0ff485}
 
-[Data_3_5]
+[Data_3_4]
 Comment=By pressing Alt+Ctrl+W a D-Bus call will be performed that will show the minicli. You can use any kind of D-Bus call, just like using the command line 'qdbus' tool.
 Enabled=false
 Name=Perform D-Bus call 'qdbus org.kde.krunner /App display'
 Type=SIMPLE_ACTION_DATA
 
-[Data_3_5Actions]
+[Data_3_4Actions]
 ActionsCount=1
 
-[Data_3_5Actions0]
+[Data_3_4Actions0]
 Arguments=
 Call=popupExecuteCommand
 RemoteApp=org.kde.krunner
 RemoteObj=/App
 Type=DBUS
 
-[Data_3_5Conditions]
+[Data_3_4Conditions]
 Comment=
 ConditionsCount=0
 
-[Data_3_5Triggers]
+[Data_3_4Triggers]
 Comment=Simple_action
 TriggersCount=1
 
-[Data_3_5Triggers0]
+[Data_3_4Triggers0]
 Key=Ctrl+Alt+W
 Type=SHORTCUT
 Uuid={b6e09b35-d8c7-406f-a441-89af5757a4f1}
 
-[Data_3_6]
+[Data_3_5]
 Comment=Read the comment on the "Type 'Hello'" action first.\n\nJust like the "Type 'Hello'" action, this one simulates keyboard input, specifically, after pressing Ctrl+Alt+B, it sends B to XMMS (B in XMMS jumps to the next song). The 'Send to specific window' tickbox is ticked and a window with its class containing 'XMMS_Player' is specified; this will make the input always be sent to this window. This way, you can control XMMS even if, for instance, it is on a different virtual desktop.\n\n(Run 'xprop' and click on the XMMS window and search for WM_CLASS to see 'XMMS_Player').
 Enabled=false
 Name=Next in XMMS
 Type=SIMPLE_ACTION_DATA
 
-[Data_3_6Actions]
+[Data_3_5Actions]
 ActionsCount=1
 
-[Data_3_6Actions0]
+[Data_3_5Actions0]
 DestinationWindow=1
 Input=B
 Type=KEYBOARD_INPUT
 
-[Data_3_6Actions0DestinationWindow]
+[Data_3_5Actions0DestinationWindow]
 Comment=XMMS window
 WindowsCount=1
 
-[Data_3_6Actions0DestinationWindow0]
+[Data_3_5Actions0DestinationWindow0]
 Class=XMMS_Player
 ClassType=1
 Comment=XMMS Player window
@@ -680,20 +654,20 @@ TitleType=0
 Type=SIMPLE
 WindowTypes=33
 
-[Data_3_6Conditions]
+[Data_3_5Conditions]
 Comment=
 ConditionsCount=0
 
-[Data_3_6Triggers]
+[Data_3_5Triggers]
 Comment=Simple_action
 TriggersCount=1
 
-[Data_3_6Triggers0]
+[Data_3_5Triggers0]
 Key=Ctrl+Alt+B
 Type=SHORTCUT
 Uuid={a386060a-8166-4277-a874-84c5559448fe}
 
-[Data_3_7]
+[Data_3_6]
 Comment=Konqueror in KDE3.1 has tabs, and now you can also have gestures.\n\nJust press the middle mouse button and start drawing one of the gestures, and after you are finished, release the mouse button. If you only need to paste the selection, it still works, just click the middle mouse button. (You can change the mouse button to use in the global settings).\n\nRight now, there are the following gestures available:\nmove right and back left - Forward (Alt+Right)\nmove left and back right - Back (Alt+Left)\nmove up and back down  - Up (Alt+Up)\ncircle anticlockwise - Reload (F5)\n\nThe gesture shapes can be entered by performing them in the configuration dialog. You can also look at your numeric pad to help you: gestures are recognized like a 3x3 grid of fields, numbered 1 to 9.\n\nNote that you must perform exactly the gesture to trigger the action. Because of this, it is possible to enter more gestures for the action. You should try to avoid complicated gestures where you change the direction of mouse movement more than once.  For instance, 45654 or 74123 are simple to perform, but 1236987 may be already quite difficult.\n\nThe conditions for all gestures are defined in this group. All these gestures are active only if the active window is Konqueror (class contains 'konqueror').
 DataCount=4
 Enabled=false
@@ -701,18 +675,18 @@ Name=Konqi Gestures
 SystemGroup=0
 Type=ACTION_DATA_GROUP
 
-[Data_3_7Conditions]
+[Data_3_6Conditions]
 Comment=Konqueror window
 ConditionsCount=1
 
-[Data_3_7Conditions0]
+[Data_3_6Conditions0]
 Type=ACTIVE_WINDOW
 
-[Data_3_7Conditions0Window]
+[Data_3_6Conditions0Window]
 Comment=Konqueror
 WindowsCount=1
 
-[Data_3_7Conditions0Window0]
+[Data_3_6Conditions0Window0]
 Class=konqueror
 ClassType=1
 Comment=Konqueror
@@ -723,153 +697,179 @@ TitleType=0
 Type=SIMPLE
 WindowTypes=33
 
-[Data_3_7_1]
+[Data_3_6_1]
 Comment=
 Enabled=false
 Name=Back
 Type=SIMPLE_ACTION_DATA
 
-[Data_3_7_1Actions]
+[Data_3_6_1Actions]
 ActionsCount=1
 
-[Data_3_7_1Actions0]
+[Data_3_6_1Actions0]
 DestinationWindow=2
 Input=Alt+Left
 Type=KEYBOARD_INPUT
 
-[Data_3_7_1Conditions]
+[Data_3_6_1Conditions]
 Comment=
 ConditionsCount=0
 
-[Data_3_7_1Triggers]
+[Data_3_6_1Triggers]
 Comment=Gesture_triggers
 TriggersCount=3
 
-[Data_3_7_1Triggers0]
+[Data_3_6_1Triggers0]
 GesturePointData=0,0.0625,1,1,0.5,0.0625,0.0625,1,0.875,0.5,0.125,0.0625,1,0.75,0.5,0.1875,0.0625,1,0.625,0.5,0.25,0.0625,1,0.5,0.5,0.3125,0.0625,1,0.375,0.5,0.375,0.0625,1,0.25,0.5,0.4375,0.0625,1,0.125,0.5,0.5,0.0625,0,0,0.5,0.5625,0.0625,0,0.125,0.5,0.625,0.0625,0,0.25,0.5,0.6875,0.0625,0,0.375,0.5,0.75,0.0625,0,0.5,0.5,0.8125,0.0625,0,0.625,0.5,0.875,0.0625,0,0.75,0.5,0.9375,0.0625,0,0.875,0.5,1,0,0,1,0.5
 Type=GESTURE
 
-[Data_3_7_1Triggers1]
+[Data_3_6_1Triggers1]
 GesturePointData=0,0.0833333,1,0.5,0.5,0.0833333,0.0833333,1,0.375,0.5,0.166667,0.0833333,1,0.25,0.5,0.25,0.0833333,1,0.125,0.5,0.333333,0.0833333,0,0,0.5,0.416667,0.0833333,0,0.125,0.5,0.5,0.0833333,0,0.25,0.5,0.583333,0.0833333,0,0.375,0.5,0.666667,0.0833333,0,0.5,0.5,0.75,0.0833333,0,0.625,0.5,0.833333,0.0833333,0,0.75,0.5,0.916667,0.0833333,0,0.875,0.5,1,0,0,1,0.5
 Type=GESTURE
 
-[Data_3_7_1Triggers2]
+[Data_3_6_1Triggers2]
 GesturePointData=0,0.0833333,1,1,0.5,0.0833333,0.0833333,1,0.875,0.5,0.166667,0.0833333,1,0.75,0.5,0.25,0.0833333,1,0.625,0.5,0.333333,0.0833333,1,0.5,0.5,0.416667,0.0833333,1,0.375,0.5,0.5,0.0833333,1,0.25,0.5,0.583333,0.0833333,1,0.125,0.5,0.666667,0.0833333,0,0,0.5,0.75,0.0833333,0,0.125,0.5,0.833333,0.0833333,0,0.25,0.5,0.916667,0.0833333,0,0.375,0.5,1,0,0,0.5,0.5
 Type=GESTURE
 
-[Data_3_7_2]
+[Data_3_6_2]
 Comment=
 Enabled=false
 Name=Forward
 Type=SIMPLE_ACTION_DATA
 
-[Data_3_7_2Actions]
+[Data_3_6_2Actions]
 ActionsCount=1
 
-[Data_3_7_2Actions0]
+[Data_3_6_2Actions0]
 DestinationWindow=2
 Input=Alt+Right
 Type=KEYBOARD_INPUT
 
-[Data_3_7_2Conditions]
+[Data_3_6_2Conditions]
 Comment=
 ConditionsCount=0
 
-[Data_3_7_2Triggers]
+[Data_3_6_2Triggers]
 Comment=Gesture_triggers
 TriggersCount=3
 
-[Data_3_7_2Triggers0]
+[Data_3_6_2Triggers0]
 GesturePointData=0,0.0625,0,0,0.5,0.0625,0.0625,0,0.125,0.5,0.125,0.0625,0,0.25,0.5,0.1875,0.0625,0,0.375,0.5,0.25,0.0625,0,0.5,0.5,0.3125,0.0625,0,0.625,0.5,0.375,0.0625,0,0.75,0.5,0.4375,0.0625,0,0.875,0.5,0.5,0.0625,1,1,0.5,0.5625,0.0625,1,0.875,0.5,0.625,0.0625,1,0.75,0.5,0.6875,0.0625,1,0.625,0.5,0.75,0.0625,1,0.5,0.5,0.8125,0.0625,1,0.375,0.5,0.875,0.0625,1,0.25,0.5,0.9375,0.0625,1,0.125,0.5,1,0,0,0,0.5
 Type=GESTURE
 
-[Data_3_7_2Triggers1]
+[Data_3_6_2Triggers1]
 GesturePointData=0,0.0833333,0,0.5,0.5,0.0833333,0.0833333,0,0.625,0.5,0.166667,0.0833333,0,0.75,0.5,0.25,0.0833333,0,0.875,0.5,0.333333,0.0833333,1,1,0.5,0.416667,0.0833333,1,0.875,0.5,0.5,0.0833333,1,0.75,0.5,0.583333,0.0833333,1,0.625,0.5,0.666667,0.0833333,1,0.5,0.5,0.75,0.0833333,1,0.375,0.5,0.833333,0.0833333,1,0.25,0.5,0.916667,0.0833333,1,0.125,0.5,1,0,0,0,0.5
 Type=GESTURE
 
-[Data_3_7_2Triggers2]
+[Data_3_6_2Triggers2]
 GesturePointData=0,0.0833333,0,0,0.5,0.0833333,0.0833333,0,0.125,0.5,0.166667,0.0833333,0,0.25,0.5,0.25,0.0833333,0,0.375,0.5,0.333333,0.0833333,0,0.5,0.5,0.416667,0.0833333,0,0.625,0.5,0.5,0.0833333,0,0.75,0.5,0.583333,0.0833333,0,0.875,0.5,0.666667,0.0833333,1,1,0.5,0.75,0.0833333,1,0.875,0.5,0.833333,0.0833333,1,0.75,0.5,0.916667,0.0833333,1,0.625,0.5,1,0,0,0.5,0.5
 Type=GESTURE
 
-[Data_3_7_3]
+[Data_3_6_3]
 Comment=
 Enabled=false
 Name=Up
 Type=SIMPLE_ACTION_DATA
 
-[Data_3_7_3Actions]
+[Data_3_6_3Actions]
 ActionsCount=1
 
-[Data_3_7_3Actions0]
+[Data_3_6_3Actions0]
 DestinationWindow=2
 Input=Alt+Up
 Type=KEYBOARD_INPUT
 
-[Data_3_7_3Conditions]
+[Data_3_6_3Conditions]
 Comment=
 ConditionsCount=0
 
-[Data_3_7_3Triggers]
+[Data_3_6_3Triggers]
 Comment=Gesture_triggers
 TriggersCount=3
 
-[Data_3_7_3Triggers0]
+[Data_3_6_3Triggers0]
 GesturePointData=0,0.0625,-0.5,0.5,1,0.0625,0.0625,-0.5,0.5,0.875,0.125,0.0625,-0.5,0.5,0.75,0.1875,0.0625,-0.5,0.5,0.625,0.25,0.0625,-0.5,0.5,0.5,0.3125,0.0625,-0.5,0.5,0.375,0.375,0.0625,-0.5,0.5,0.25,0.4375,0.0625,-0.5,0.5,0.125,0.5,0.0625,0.5,0.5,0,0.5625,0.0625,0.5,0.5,0.125,0.625,0.0625,0.5,0.5,0.25,0.6875,0.0625,0.5,0.5,0.375,0.75,0.0625,0.5,0.5,0.5,0.8125,0.0625,0.5,0.5,0.625,0.875,0.0625,0.5,0.5,0.75,0.9375,0.0625,0.5,0.5,0.875,1,0,0,0.5,1
 Type=GESTURE
 
-[Data_3_7_3Triggers1]
+[Data_3_6_3Triggers1]
 GesturePointData=0,0.0833333,-0.5,0.5,1,0.0833333,0.0833333,-0.5,0.5,0.875,0.166667,0.0833333,-0.5,0.5,0.75,0.25,0.0833333,-0.5,0.5,0.625,0.333333,0.0833333,-0.5,0.5,0.5,0.416667,0.0833333,-0.5,0.5,0.375,0.5,0.0833333,-0.5,0.5,0.25,0.583333,0.0833333,-0.5,0.5,0.125,0.666667,0.0833333,0.5,0.5,0,0.75,0.0833333,0.5,0.5,0.125,0.833333,0.0833333,0.5,0.5,0.25,0.916667,0.0833333,0.5,0.5,0.375,1,0,0,0.5,0.5
 Type=GESTURE
 
-[Data_3_7_3Triggers2]
+[Data_3_6_3Triggers2]
 GesturePointData=0,0.0833333,-0.5,0.5,0.5,0.0833333,0.0833333,-0.5,0.5,0.375,0.166667,0.0833333,-0.5,0.5,0.25,0.25,0.0833333,-0.5,0.5,0.125,0.333333,0.0833333,0.5,0.5,0,0.416667,0.0833333,0.5,0.5,0.125,0.5,0.0833333,0.5,0.5,0.25,0.583333,0.0833333,0.5,0.5,0.375,0.666667,0.0833333,0.5,0.5,0.5,0.75,0.0833333,0.5,0.5,0.625,0.833333,0.0833333,0.5,0.5,0.75,0.916667,0.0833333,0.5,0.5,0.875,1,0,0,0.5,1
 Type=GESTURE
 
-[Data_3_7_4]
+[Data_3_6_4]
 Comment=
 Enabled=false
 Name=Reload
 Type=SIMPLE_ACTION_DATA
 
-[Data_3_7_4Actions]
+[Data_3_6_4Actions]
 ActionsCount=1
 
-[Data_3_7_4Actions0]
+[Data_3_6_4Actions0]
 DestinationWindow=2
 Input=F5
 Type=KEYBOARD_INPUT
 
-[Data_3_7_4Conditions]
+[Data_3_6_4Conditions]
 Comment=
 ConditionsCount=0
 
-[Data_3_7_4Triggers]
+[Data_3_6_4Triggers]
 Comment=Gesture_triggers
 TriggersCount=3
 
-[Data_3_7_4Triggers0]
+[Data_3_6_4Triggers0]
 GesturePointData=0,0.03125,0,0,1,0.03125,0.03125,0,0.125,1,0.0625,0.03125,0,0.25,1,0.09375,0.03125,0,0.375,1,0.125,0.03125,0,0.5,1,0.15625,0.03125,0,0.625,1,0.1875,0.03125,0,0.75,1,0.21875,0.03125,0,0.875,1,0.25,0.03125,-0.5,1,1,0.28125,0.03125,-0.5,1,0.875,0.3125,0.03125,-0.5,1,0.75,0.34375,0.03125,-0.5,1,0.625,0.375,0.03125,-0.5,1,0.5,0.40625,0.03125,-0.5,1,0.375,0.4375,0.03125,-0.5,1,0.25,0.46875,0.03125,-0.5,1,0.125,0.5,0.03125,1,1,0,0.53125,0.03125,1,0.875,0,0.5625,0.03125,1,0.75,0,0.59375,0.03125,1,0.625,0,0.625,0.03125,1,0.5,0,0.65625,0.03125,1,0.375,0,0.6875,0.03125,1,0.25,0,0.71875,0.03125,1,0.125,0,0.75,0.03125,0.5,0,0,0.78125,0.03125,0.5,0,0.125,0.8125,0.03125,0.5,0,0.25,0.84375,0.03125,0.5,0,0.375,0.875,0.03125,0.5,0,0.5,0.90625,0.03125,0.5,0,0.625,0.9375,0.03125,0.5,0,0.75,0.96875,0.03125,0.5,0,0.875,1,0,0,0,1
 Type=GESTURE
 
-[Data_3_7_4Triggers1]
+[Data_3_6_4Triggers1]
 GesturePointData=0,0.0277778,0,0,1,0.0277778,0.0277778,0,0.125,1,0.0555556,0.0277778,0,0.25,1,0.0833333,0.0277778,0,0.375,1,0.111111,0.0277778,0,0.5,1,0.138889,0.0277778,0,0.625,1,0.166667,0.0277778,0,0.75,1,0.194444,0.0277778,0,0.875,1,0.222222,0.0277778,-0.5,1,1,0.25,0.0277778,-0.5,1,0.875,0.277778,0.0277778,-0.5,1,0.75,0.305556,0.0277778,-0.5,1,0.625,0.333333,0.0277778,-0.5,1,0.5,0.361111,0.0277778,-0.5,1,0.375,0.388889,0.0277778,-0.5,1,0.25,0.416667,0.0277778,-0.5,1,0.125,0.444444,0.0277778,1,1,0,0.472222,0.0277778,1,0.875,0,0.5,0.0277778,1,0.75,0,0.527778,0.0277778,1,0.625,0,0.555556,0.0277778,1,0.5,0,0.583333,0.0277778,1,0.375,0,0.611111,0.0277778,1,0.25,0,0.638889,0.0277778,1,0.125,0,0.666667,0.0277778,0.5,0,0,0.694444,0.0277778,0.5,0,0.125,0.722222,0.0277778,0.5,0,0.25,0.75,0.0277778,0.5,0,0.375,0.777778,0.0277778,0.5,0,0.5,0.805556,0.0277778,0.5,0,0.625,0.833333,0.0277778,0.5,0,0.75,0.861111,0.0277778,0.5,0,0.875,0.888889,0.0277778,0,0,1,0.916667,0.0277778,0,0.125,1,0.944444,0.0277778,0,0.25,1,0.972222,0.0277778,0,0.375,1,1,0,0,0.5,1
 Type=GESTURE
 
-[Data_3_7_4Triggers2]
+[Data_3_6_4Triggers2]
 GesturePointData=0,0.0277778,0.5,0,0.5,0.0277778,0.0277778,0.5,0,0.625,0.0555556,0.0277778,0.5,0,0.75,0.0833333,0.0277778,0.5,0,0.875,0.111111,0.0277778,0,0,1,0.138889,0.0277778,0,0.125,1,0.166667,0.0277778,0,0.25,1,0.194444,0.0277778,0,0.375,1,0.222222,0.0277778,0,0.5,1,0.25,0.0277778,0,0.625,1,0.277778,0.0277778,0,0.75,1,0.305556,0.0277778,0,0.875,1,0.333333,0.0277778,-0.5,1,1,0.361111,0.0277778,-0.5,1,0.875,0.388889,0.0277778,-0.5,1,0.75,0.416667,0.0277778,-0.5,1,0.625,0.444444,0.0277778,-0.5,1,0.5,0.472222,0.0277778,-0.5,1,0.375,0.5,0.0277778,-0.5,1,0.25,0.527778,0.0277778,-0.5,1,0.125,0.555556,0.0277778,1,1,0,0.583333,0.0277778,1,0.875,0,0.611111,0.0277778,1,0.75,0,0.638889,0.0277778,1,0.625,0,0.666667,0.0277778,1,0.5,0,0.694444,0.0277778,1,0.375,0,0.722222,0.0277778,1,0.25,0,0.75,0.0277778,1,0.125,0,0.777778,0.0277778,0.5,0,0,0.805556,0.0277778,0.5,0,0.125,0.833333,0.0277778,0.5,0,0.25,0.861111,0.0277778,0.5,0,0.375,0.888889,0.0277778,0.5,0,0.5,0.916667,0.0277778,0.5,0,0.625,0.944444,0.0277778,0.5,0,0.75,0.972222,0.0277778,0.5,0,0.875,1,0,0,0,1
 Type=GESTURE
 
-[Data_3_8]
+[Data_3_7]
 Comment=After pressing Win+E (Tux+E) a WWW browser will be launched, and it will open http://www.kde.org . You may run all kind of commands you can run in minicli (Alt+F2).
 Enabled=false
 Name=Go to KDE Website
+Type=SIMPLE_ACTION_DATA
+
+[Data_3_7Actions]
+ActionsCount=1
+
+[Data_3_7Actions0]
+CommandURL=http://www.kde.org
+Type=COMMAND_URL
+
+[Data_3_7Conditions]
+Comment=
+ConditionsCount=0
+
+[Data_3_7Triggers]
+Comment=Simple_action
+TriggersCount=1
+
+[Data_3_7Triggers0]
+Key=Meta+E
+Type=SHORTCUT
+Uuid={4ac36450-2bb5-4cf8-9dc1-e82bd80c3070}
+
+[Data_3_8]
+Comment=Comment
+Enabled=true
+Name=New Action
 Type=SIMPLE_ACTION_DATA
 
 [Data_3_8Actions]
 ActionsCount=1
 
 [Data_3_8Actions0]
-CommandURL=http://www.kde.org
+CommandURL=
 Type=COMMAND_URL
 
 [Data_3_8Conditions]
@@ -881,21 +881,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_3_8Triggers0]
-Key=Meta+E
+Key=
 Type=SHORTCUT
-Uuid={4ac36450-2bb5-4cf8-9dc1-e82bd80c3070}
+Uuid={65da57bb-3698-4b46-bb36-af2841395d31}
 
 [Data_4]
-Comment=Starts calculator
+Comment=This action runs Konsole, after pressing Ctrl+Alt+T.
 Enabled=true
-Name=Calculator
+Name=Run Konsole
 Type=SIMPLE_ACTION_DATA
 
 [Data_4Actions]
 ActionsCount=1
 
 [Data_4Actions0]
-CommandURL=gnome-calculator
+CommandURL=konsole
 Type=COMMAND_URL
 
 [Data_4Conditions]
@@ -907,21 +907,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_4Triggers0]
-Key=Meta+C
+Key=Ctrl+Alt+T
 Type=SHORTCUT
-Uuid={c015bc36-d7e7-4233-a1dd-c23deb3a1750}
+Uuid={24dcab47-2e10-47ac-a485-d3ca85698305}
 
 [Data_5]
-Comment=Starts Google Chrome
+Comment=Starts calculator
 Enabled=true
-Name=Chrome
+Name=Calculator
 Type=SIMPLE_ACTION_DATA
 
 [Data_5Actions]
 ActionsCount=1
 
 [Data_5Actions0]
-CommandURL=google-chrome
+CommandURL=gnome-calculator
 Type=COMMAND_URL
 
 [Data_5Conditions]
@@ -933,21 +933,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_5Triggers0]
-Key=Meta+I
+Key=Meta+C
 Type=SHORTCUT
-Uuid={2482ecae-4c5d-4204-ac5e-08936ff58f7b}
+Uuid={c015bc36-d7e7-4233-a1dd-c23deb3a1750}
 
 [Data_6]
-Comment=Opens sublime
+Comment=Starts Google Chrome
 Enabled=true
-Name=Sublime
+Name=Chrome
 Type=SIMPLE_ACTION_DATA
 
 [Data_6Actions]
 ActionsCount=1
 
 [Data_6Actions0]
-CommandURL=subl
+CommandURL=google-chrome
 Type=COMMAND_URL
 
 [Data_6Conditions]
@@ -959,21 +959,21 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_6Triggers0]
-Key=Meta+S
+Key=Meta+I
 Type=SHORTCUT
-Uuid={b0974481-c275-4b20-a41e-91cf5ae029ea}
+Uuid={2482ecae-4c5d-4204-ac5e-08936ff58f7b}
 
 [Data_7]
-Comment=Starts KeepassXC
+Comment=Opens sublime
 Enabled=true
-Name=KeepassXC
+Name=Sublime
 Type=SIMPLE_ACTION_DATA
 
 [Data_7Actions]
 ActionsCount=1
 
 [Data_7Actions0]
-CommandURL=keepassxc
+CommandURL=subl
 Type=COMMAND_URL
 
 [Data_7Conditions]
@@ -985,6 +985,32 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_7Triggers0]
+Key=Meta+S
+Type=SHORTCUT
+Uuid={b0974481-c275-4b20-a41e-91cf5ae029ea}
+
+[Data_8]
+Comment=Starts KeepassXC
+Enabled=true
+Name=KeepassXC
+Type=SIMPLE_ACTION_DATA
+
+[Data_8Actions]
+ActionsCount=1
+
+[Data_8Actions0]
+CommandURL=keepassxc
+Type=COMMAND_URL
+
+[Data_8Conditions]
+Comment=
+ConditionsCount=0
+
+[Data_8Triggers]
+Comment=Simple_action
+TriggersCount=1
+
+[Data_8Triggers0]
 Key=Meta+K
 Type=SHORTCUT
 Uuid={c48887c9-6344-429d-bcbb-7fe89ce046de}

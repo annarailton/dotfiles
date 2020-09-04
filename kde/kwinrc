@@ -1,0 +1,51 @@
+[$Version]
+update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-effect-to-js,kwin.upd:port-scale-effect-to-js,kwin.upd:port-dimscreen-effect-to-js,kwin.upd:auto-bordersize,kwin.upd:animation-speed
+
+[Compositing]
+OpenGLIsUnsafe=false
+
+[Desktops]
+Id_1=3070f151-8b03-490a-b614-e1061ee93aa7
+Id_10=653631a0-ed06-4041-aed1-76c23546d604
+Id_11=5093109d-e390-4050-ae02-ea58bddcaded
+Id_12=a2e224d7-55e4-4aeb-860a-7325cf62f96a
+Id_2=6c0fe221-9679-44e2-a3ee-6048856d0b65
+Id_3=8652209c-fa92-4353-8311-5c327c723141
+Id_4=d467cc87-7ba6-4b56-81fb-367ea9556939
+Id_5=7e7f6ba8-0daf-4b91-8703-04571bbfd7e7
+Id_6=1ea5763e-2bf9-4e3f-9643-3fa58d46d26d
+Id_7=e451b4a6-e545-4c10-bb00-c79ec151546e
+Id_8=4372a178-4d4f-4150-b0f9-0f8bf94f1719
+Id_9=bf8699b7-13d7-4e4d-811f-be8066e806cd
+Name_10=New Desktop
+Name_11=New Desktop
+Name_12=New Desktop
+Name_2=New Desktop
+Name_3=New Desktop
+Name_4=New Desktop
+Name_5=New Desktop
+Name_6=New Desktop
+Name_7=New Desktop
+Name_8=New Desktop
+Name_9=New Desktop
+Number=12
+Rows=3
+
+[Plugins]
+desktopchangeosdEnabled=false
+
+[Script-desktopchangeosd]
+PopupHideDelay=1000
+TextOnly=false
+
+[TabBox]
+DesktopLayout=org.kde.breeze.desktop
+DesktopListLayout=org.kde.breeze.desktop
+LayoutName=org.kde.breeze.desktop
+
+[Windows]
+RollOverDesktops=false
+
+[org.kde.kdecoration2]
+library=org.kde.breeze
+theme=

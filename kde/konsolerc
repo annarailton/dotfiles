@@ -1,0 +1,24 @@
+[Desktop Entry]
+DefaultProfile=Profile 1.profile
+
+[Favorite Profiles]
+Favorites=
+
+[MainWindow]
+Height 1080=493
+Height 1440=669
+Height 1503=694
+Height 1646=595
+Height 2160=998
+Height 823=595
+State=AAAA/wAAAAD9AAAAAAAABQAAAAJ/AAAABAAAAAQAAAAIAAAACPwAAAAA
+ToolBarsMovable=Disabled
+Width 1463=1034
+Width 1920=960
+Width 2560=1280
+Width 2671=1336
+Width 2926=1034
+Width 3840=1921
+
+[TabBar]
+NewTabButton=true
