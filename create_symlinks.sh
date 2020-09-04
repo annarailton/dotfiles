@@ -5,11 +5,12 @@
 
 # Variables
 #==========
-dotfiles_dir=~/dotfiles
+dotfiles_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 old_dir=~/.old_dotfiles
 
-# Delete existing dot files and folders
+# Move existing dot files and folders
 #======================================
+cd 
 mkdir $old_dir
 mv -v .bash_aliases $old_dir 2> /dev/null
 mv -v .bashrc $old_dir 2> /dev/null
