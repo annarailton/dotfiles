@@ -41,3 +41,10 @@ sudo usermod -aG docker $USER
 
 # Get work passwords (attach to Keepass install)
 git clone git@github.com:annarailton/work-passwords.git admin/work-passwords
+
+# Install some linters
+python3 -m pip install pylint yapf yamllint mypy
+sudo apt-get install shellcheck
+
+# Cleanup
+sudo apt autoremove

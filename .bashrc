@@ -139,3 +139,5 @@ lint-file() {
 lint() {
     docker run -e RUN_LOCAL=true -v $1:/tmp/lint github/super-linter
 }
+
+export PATH="$HOME/.local/bin:$PATH"
