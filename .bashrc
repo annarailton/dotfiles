@@ -129,9 +129,6 @@ fi
 export EDITOR=subl
 export GIT_EDITOR=nano
 
-# Required for The Fuck to work https://github.com/nvbn/thefuck
-eval $(thefuck --alias)
-
 source /etc/profile.d/undistract-me.sh
 
 # Super linter, see https://github.com/github/super-linter/blob/master/docs/run-linter-locally.md
