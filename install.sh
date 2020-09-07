@@ -1,6 +1,6 @@
 # Basic packages
 sudo apt update
-sudo apt install git curl apt-transport-https
+sudo apt install git curl apt-transport-https ca-certificates lsb-release gnupg
 sudo snap install keepassxc
 sudo apt install undistract-me
 sudo snap install slack --classic
@@ -38,12 +38,24 @@ git clone git@github.com:annarailton/sublime-settings.git ~/.config/sublime-text
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh get-docker.sh
 sudo usermod -aG docker $USER
+rm get-docker.sh
+
+# Install Azure CLI
+sudo apt-get update
+curl -sL https://packages.microsoft.com/keys/microsoft.asc |
+    gpg --dearmor |
+    sudo tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
+AZ_REPO=$(lsb_release -cs)
+echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" |
+    sudo tee /etc/apt/sources.list.d/azure-cli.list
+sudo apt-get update
+sudo apt-get install azure-cli
 
 # Get work passwords (attach to Keepass install)
 git clone git@github.com:annarailton/work-passwords.git admin/work-passwords
 
 # Install some linters
-python3 -m pip install pylint yapf yamllint mypy
+python3 -m pip install pylint yapf yamllint mypy pipenv
 sudo apt-get install shellcheck
 
 # Cleanup
