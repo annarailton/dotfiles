@@ -33,3 +33,5 @@
     required = true
 [init]
     templateDir = ~/.config/git/template/
+[rebase]
+	autosquash = true
