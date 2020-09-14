@@ -1,13 +1,14 @@
 # Basic packages
 sudo apt update
 sudo apt install git curl apt-transport-https ca-certificates lsb-release gnupg
-sudo snap install keepassxc
 sudo apt install undistract-me
-sudo snap install slack --classic
 sudo apt install fonts-firacode
 sudo apt-get install insync
 sudo apt-get install ktouch
 sudo apt install python3-virtualenv python3-pip
+sudo snap install keepassxc
+sudo snap install slack --classic
+sudo snap install htop
 
 # Get dotfiles
 mkdir admin
