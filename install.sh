@@ -9,6 +9,7 @@ sudo apt install python3-virtualenv python3-pip
 sudo snap install keepassxc
 sudo snap install slack --classic
 sudo snap install htop
+sudo snap install pre-commit --classic
 
 # Get dotfiles
 mkdir admin
