@@ -24,8 +24,10 @@
     bclean = "!f() { git branch --merged ${1-main} | grep -v " ${1-main}$" | xargs -r git branch -d; }; f"
     co = checkout
     cob = checkout -b
+    cobu = "!f() { git checkout -b $USER/$1; }; f"
     com = checkout main
     wip = commit -am "WIP"
+    pullr = pull --rebase
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
@@ -35,3 +37,5 @@
     templateDir = ~/.config/git/template/
 [rebase]
 	autosquash = true
+[pull]
+	ff = only
