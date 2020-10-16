@@ -36,7 +36,7 @@ repos:
 
 # Reformat all the things
 - repo: https://github.com/pre-commit/mirrors-yapf
-  rev: v0.28.0
+  rev: v0.30.0
   hooks:
   - id: yapf
 
