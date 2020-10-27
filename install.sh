@@ -3,6 +3,7 @@ sudo apt update
 sudo apt install git curl apt-transport-https ca-certificates lsb-release gnupg
 sudo apt install undistract-me
 sudo apt install fonts-firacode
+sudo apt install jq
 sudo apt-get install insync
 sudo apt-get install ktouch
 sudo apt install python3-virtualenv python3-pip
