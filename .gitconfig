@@ -23,7 +23,7 @@
     bn = "!f() { git b --no-merged; }; f"
     bclean = "!f() { git branch --merged ${1-main} | grep -v " ${1-main}$" | xargs -r git branch -d; }; f"
     co = checkout
-    cob = "!f() { git checkout -b $USER/$1; }; f"
+    cob = "!f() { git checkout -b annarailton/$1; }; f"
     cobb = checkout -b
     com = checkout main
     wip = commit -am "WIP"
