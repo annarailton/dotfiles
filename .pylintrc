@@ -61,7 +61,8 @@ disable=
     protected-access,
     too-few-public-methods,
     # handled by black
-    format
+    format,
+    logging-fstring-interpolation
 
 
 [REPORTS]
