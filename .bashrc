@@ -145,10 +145,21 @@ export PATH="$HOME/.local/bin:$PATH"
 # pyenv stuff
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1  # This is to crush the annoying warning
+
+# Add the pyenv venv back to prompt
+__pyenv_version_ps1 ()
+{
+    local ret=$?;
+    if [ -n "${PYENV_VIRTUAL_ENV}" ]; then
+        echo -n "(${PYENV_VIRTUAL_ENV##*/}) "
+    fi
+    return $?
+}
+PS1="\$(__pyenv_version_ps1)${PS1}"
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-# Local bin dir
-export PATH="/home/$USER/bin:$PATH"
+eval "$(pyenv virtualenv-init -)"
