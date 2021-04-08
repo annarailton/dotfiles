@@ -3,8 +3,7 @@
 # .pre-commit-config.yml file.
 
 [style]
-based_on_style = pep8
-SPLIT_BEFORE_FIRST_ARGUMENT = True
-SPLIT_BEFORE_BITWISE_OPERATOR = False
-COLUMN_LIMIT: 99
-INDENT_WIDTH=4  # The number of columns to use for indentation
+based_on_style = facebook
+column_limit = 120
+split_before_first_argument = True
+split_before_bitwise_operator = False
