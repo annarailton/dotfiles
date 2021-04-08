@@ -67,11 +67,3 @@ alias most_recent="find . -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -
 # Be polite
 alias please='sudo $(history -p !!)'
 
-# odasa setup
-alias setup_odasa='source /home/railton/ext_projects/odasa/setup.sh'
-
-# systemctl commands are long
-alias sys-restart='systemctl restart'
-alias sys-stop='systemctl stop'
-alias sys-start='systemctl start'
-alias sys-st='systemctl status'
