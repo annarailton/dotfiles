@@ -27,8 +27,12 @@
     cob = "!f() { git checkout -b annarailton/$1; }; f"
     cobb = checkout -b
     com = checkout main
-    wip = commit -am "WIP"
+    wip = commit -a -n -m "WIP"
     pullr = pull --rebase
+    cp = cherry-pick
+    cpc = cherry-pick --continue
+    rb = rebase
+    rbc = rebase --continue
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
