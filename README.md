@@ -15,7 +15,7 @@ Default configuration files
 - Windowing, use [Magnet](https://magnet.crowdcafe.com/)
 - Keep screenshots off the desktop: `defaults write com.apple.screencapture location ~/Pictures`
 - Install [Alfred 4](https://www.alfredapp.com/) (license via GH Gear)
-- 
+- Make Python 3.7.x the default via `pyenv` - if you try to make it `3.9.x` too much stuff will break.
 
 ### Mouse
 
