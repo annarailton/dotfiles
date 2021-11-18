@@ -33,6 +33,7 @@
     cpc = cherry-pick --continue
     rb = rebase
     rbc = rebase --continue
+    last = rev-parse HEAD
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
