@@ -6,6 +6,7 @@
     editor = nano -r 72
 [push]
     default = simple
+    autoSetupRemote = true
 [alias]
     a = add
     st = status -s
@@ -35,7 +36,6 @@
     rbc = rebase --continue
     last = rev-parse HEAD
     lines = diff --shortstat main
-    pushb = push -u origin HEAD
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
