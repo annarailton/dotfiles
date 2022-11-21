@@ -33,9 +33,11 @@
     cp = cherry-pick
     cpc = cherry-pick --continue
     rb = rebase
+    rbi = rebase -i
     rbc = rebase --continue
     last = rev-parse HEAD
     lines = diff --shortstat main
+    fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
