@@ -16,6 +16,7 @@
     c = commit
     cf = commit --fixup
     ca = commit --amend
+    p = pull
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     up = !git fetch origin && git rebase origin/main --autostash
     logn = log --name-only
