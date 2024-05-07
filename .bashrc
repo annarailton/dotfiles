@@ -126,10 +126,8 @@ if ! shopt -oq posix; then
 fi
 
 # Setup default editors
-export EDITOR=subl
+export EDITOR=code
 export GIT_EDITOR=nano
-
-source /etc/profile.d/undistract-me.sh
 
 # Super linter, see https://github.com/github/super-linter/blob/master/docs/run-linter-locally.md
 lint-file() {
