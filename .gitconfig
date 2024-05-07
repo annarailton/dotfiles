@@ -52,3 +52,5 @@
 	ff = only
 [merge]
 	conflictstyle = diff3
+[url "git@github.com:"]
+  insteadOf = https://github.com/
