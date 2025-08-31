@@ -9,38 +9,38 @@
     autoSetupRemote = true
 [alias]
     a = add
-    st = status -s
-    stt = status
-    cm = commit -m
-    cn = commit -n -m
-    c = commit
-    cf = commit --fixup
-    ca = commit --amend
-    p = pull
-    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-    up = !git fetch origin && git rebase origin/main --autostash
-    logn = log --name-only
     b = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
     bb = rev-parse --abbrev-ref HEAD  # get current branch name
-    pushf = push --force-with-lease
+    bclean = "!f() { git branch --merged ${1-main} | grep -v " ${1-main}$" | xargs -r git branch -d; }; f"
     bm = "!f() { git b --merged; }; f"
     bn = "!f() { git b --no-merged; }; f"
-    bclean = "!f() { git branch --merged ${1-main} | grep -v " ${1-main}$" | xargs -r git branch -d; }; f"
+    c = commit
+    ca = commit --amend
+    cf = commit --fixup
+    cm = commit -m
+    cn = commit -n -m
     co = checkout
     cob = "!f() { git checkout -b annarailton/$1; }; f"
     cobb = checkout -b
     com = checkout main
-    wip = commit -a -n -m "WIP"
-    pullr = pull --rebase
     cp = cherry-pick
     cpc = cherry-pick --continue
-    rb = rebase
-    rbi = rebase -i
-    rbc = rebase --continue
+    diffc = diff --cached
+    fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
     last = rev-parse HEAD
     lines = diff --shortstat main
-    fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
-    diffc = diff --cached
+    logn = log --name-only
+    p = pull
+    pullr = pull --rebase
+    pushf = push --force-with-lease
+    rb = rebase
+    rbc = rebase --continue
+    rbi = rebase -i
+    st = status -s
+    stt = status
+    up = !git fetch origin && git rebase origin/main --autostash
+    wip = commit -a -n -m "WIP"
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
