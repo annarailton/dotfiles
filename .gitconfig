@@ -21,6 +21,7 @@
     up = !git fetch origin && git rebase origin/main --autostash
     logn = log --name-only
     b = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+    bb = rev-parse --abbrev-ref HEAD  # get current branch name
     pushf = push --force-with-lease
     bm = "!f() { git b --merged; }; f"
     bn = "!f() { git b --no-merged; }; f"
@@ -39,6 +40,7 @@
     last = rev-parse HEAD
     lines = diff --shortstat main
     fixup = "!git log -n 50 --pretty=format:'%h %s' --no-merges | fzf | cut -c -7 | xargs -o git commit --fixup"
+    diffc = diff --cached
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
