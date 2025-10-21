@@ -13,7 +13,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/annarailton/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 
 # Set name of the theme to load --- if set to "random", it will
@@ -127,5 +127,5 @@ PATH="$(brew --prefix findutils)/libexec/gnubin:$PATH"
 alias okta-fix="security find-generic-password -l device_trust '-w'"
 export PATH="/usr/local/opt/node@16/bin:$PATH"
 
-export AZURE_CHAT_COMPLETIONS_GPT4_SECRETS_SWN=988a0c04a64d489fbf6a90c3d5cdc449
-export AZURE_CHAT_COMPLETIONS_GPT4_URLS_SWN=https://copilot-chat-pool1-ide-switzerlandnorth.openai.azure.com/openai/v1/engines/copilot-gpt-4
+# Load Powerlevel10k theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
