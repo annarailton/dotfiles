@@ -1,7 +1,3 @@
-# pyenv
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -20,7 +16,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME is not set here because we source powerlevel10k directly below
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -86,9 +82,6 @@ GITSTATUS_LOG_LEVEL=DEBUG
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git pyenv)
 
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-export GEM_HOME="$HOME/.gem"
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -118,14 +111,16 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias hist="history 1"
 
-# This makes xargs behave like you expect
-PATH="$(brew --prefix findutils)/libexec/gnubin:$PATH"
+# Load Powerlevel10k theme
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-alias okta-fix="security find-generic-password -l device_trust '-w'"
-export PATH="/usr/local/opt/node@16/bin:$PATH"
-
-# Load Powerlevel10k theme
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+# pyenv initialization
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
